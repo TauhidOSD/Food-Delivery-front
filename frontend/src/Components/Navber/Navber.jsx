@@ -3,7 +3,7 @@ import './Navber.css'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom'
 
-const Navber = () => {
+const Navber = ({setShowlogin}) => {
 
   const [menu,setMenu] = useState("home")
 
@@ -22,7 +22,7 @@ const Navber = () => {
                 <img src={assets.basket_icon} alt="" />
                 <div className="dot"></div>
             </div>
-            <button>Sign in</button>
+            <button onClick={()=>setShowlogin(true)}>Sign in</button>
         </div>
     </div>
   )
